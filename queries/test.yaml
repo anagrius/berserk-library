@@ -1,7 +1,0 @@
-query: |
-  // comment
-  dev
-  | summarize event_count = count() by service = tostring(resource.attributes.service.name)
-  | render barchart with (title="Service count", ytitle="Events", xtitle="Service", legend=hidden)
-since: 24h ago
-until: now
