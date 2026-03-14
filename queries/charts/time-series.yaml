@@ -1,4 +1,0 @@
-query: |
-  default | summarize count() by bin_auto($time)
-since: 24h ago
-until: now
