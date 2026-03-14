@@ -1,0 +1,10 @@
+query: |
+  default
+  | summarize request_count = count() by service = tostring(resource.attributes.service.name), bin_auto($time)
+  | as hint.materialized = true T
+  | partition by service (
+      top 1 by request_count desc
+  )
+  | order by request_count desc
+since: "24h ago"
+until: "now"
