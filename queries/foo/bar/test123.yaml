@@ -1,0 +1,3 @@
+query: dev | count
+since: 24h ago
+until: now
