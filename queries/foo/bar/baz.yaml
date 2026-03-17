@@ -1,3 +1,0 @@
-query: dev | where isnotnull($raw) | count
-since: 24h ago
-until: now
