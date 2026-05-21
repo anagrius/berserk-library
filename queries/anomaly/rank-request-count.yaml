@@ -6,5 +6,5 @@ query: |
       top 1 by request_count desc
   )
   | order by request_count desc
-since: "24h ago"
-until: "now"
+since: 24h ago
+until: now
